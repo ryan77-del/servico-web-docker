@@ -1,0 +1,36 @@
+services:
+  web:
+    image: meu-apache:v1
+    ports:
+      - "8080:80"
+    networks:
+      - net-web
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_USER: ryan
+      MYSQL_PASSWORD: senha123
+      MYSQL_ROOT_PASSWORD: "1556"
+    volumes:
+      - data:/var/lib/mysql
+    networks:
+      - net-web
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db
+    networks:
+      - net-web
+
+volumes:
+  data:
+
+networks:
+  net-web:
+    driver: bridge
