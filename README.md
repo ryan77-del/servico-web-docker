@@ -11,6 +11,3 @@ A aplicação utiliza Docker Compose para executar uma página web com Apache, a
 - Apache (httpd)
 - MySQL
 - Adminer
-- HTML
-- CSS
-- JavaScript
