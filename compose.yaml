@@ -1,6 +1,6 @@
 services:
   web:
-    image: meu-apache:v1
+    build: ./frontend
     ports:
       - "8080:80"
     networks:
