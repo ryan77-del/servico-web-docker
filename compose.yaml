@@ -1,5 +1,6 @@
 services:
   web:
+    container_name: projeto_web
     build: ./frontend
     ports:
       - "8080:80"
@@ -7,6 +8,7 @@ services:
       - net-web
 
   db:
+    container_name: projeto_db
     image: mysql:8.0
     restart: always
     environment:
@@ -20,6 +22,7 @@ services:
       - net-web
 
   adminer:
+    container_name: projeto adminer
     image: adminer
     restart: always
     ports:
