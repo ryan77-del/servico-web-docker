@@ -7,9 +7,10 @@ services:
       - net-web
 
   db:
-    image: mysql
+    image: mysql:8.0
     restart: always
     environment:
+      MYSQL_DATABASE: meu_banco
       MYSQL_USER: ryan
       MYSQL_PASSWORD: senha123
       MYSQL_ROOT_PASSWORD: "1556"
