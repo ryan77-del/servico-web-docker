@@ -22,7 +22,7 @@ services:
       - net-web
 
   adminer:
-    container_name: projeto adminer
+    container_name: projeto_adminer
     image: adminer
     restart: always
     ports:
